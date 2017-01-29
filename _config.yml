@@ -2,7 +2,7 @@ title: Laracasts-downloader
 description: Downloads new lessons and series from laracasts if there are updates. Or the whole catalogue.
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-hacker
+theme: jekyll-theme-cayman
 
 gems:
   - jekyll-mentions
