@@ -6,7 +6,7 @@
 
 Downloads new lessons and series from laracasts if there are updates. Or the whole catalogue.
 
-**Working good at 27/09/2016**
+**Working good at 29/01/2017**
 
 ## Description
 Syncs your local folder with the laracasts website, when there are new lessons the app download it for you.
@@ -21,6 +21,7 @@ Just call `php makeskips.php` before deleting the lessons.
 ## Requirements
 - PHP >= 5.4
 - php-cURL
+- php-xml
 - Composer
 
 ## Installation
@@ -37,6 +38,18 @@ Also works in the browser, but is better from the cli because of the instant fee
 - `docker build -t image-name .`
 - `docker run -d -v /host-path:/container-path-in-config.ini image-name` and the path should be absolute
 
+## Downloading specific series or lessons
+- You can use series and lessons names
+- You can use series and lessons slugs (preferred because there are some custom slugs too)
+- You can download multiples series/lessons
+
+### Commands to download series
+    php start.php -s "Series name example" -s "series-slug-example"
+    php start.php --series-name "Series name example" -series-name "series-slug-example"
+    
+### Command to download lessons
+    php start.php -l "Lesson name example" -l "lesson-slug-example"
+    php start.php --lesson-name "Lessons name example" --lesson-name "lesson-slug-example"
 
 ## Troubleshooting
 If you have a `cURL error 60: SSL certificate problem: self signed certificate in certificate chain` do this:
